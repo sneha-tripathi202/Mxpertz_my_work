@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{margin: 0;padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family:  "Inter", sans-serif;
+}
+
+:root{
+  --pink:#FF3C8A;
+  --white:#FFFFFF;
+  --blue1:#5676FF;
+  --back-colour:#F5F5F5;
+  --black:#363636;
+  --blue2:#008BD8;
+}
+.header {
+  width: 100vw;
+  background: 
+    linear-gradient(to right , rgba(0,0,0,1), rgba(255,255,255,0)), 
+    url('./images/bgwork.webp');
+  background-size: cover;
+  background-position:top;
+}
+.image
+{
+  background-image: url(images/boy.png);
+}
+.div{
+  background-image:url("./images/boy4.png")  ;
+  background-size: cover;
+  background-position: center;
+}
+.scroll::-webkit-scrollbar{
+  display:none
+}
+
