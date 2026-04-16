@@ -10,7 +10,7 @@ import child6Img from '../images/child6.jpg'
 const SmartAca = () => {
   return (
     <div className='w-screen h-220 bg-gray-100'>
-       <h1 className='text-center font-bold text-4xl md:text-5xl  text-(--blue1)' >Our Featured Course <br /> at Smart Academy</h1>
+       <h1 className='text-center font-bold text-4xl xl:text-5xl  text-(--blue1)' >Our Featured Course <br /> at Smart Academy</h1>
         <div className=' scroll flex gap-8 mt-14 whitespace-nowrap overflow-x-auto overflow-y-hidden scroll'>
              <MovingCard image={child1Img} name={"Ava Davis"}/>
              <MovingCard image={child2Img} name={"Sophia Miller"}/>

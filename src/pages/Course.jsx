@@ -11,10 +11,10 @@ import CourseCard from '../components/CourseCard'
 
 const Course = () => {
   return (
-    <div className='bg-gray-100 h-350'>
+    <div className='bg-gray-100 lg:h-300 xl:h-350 h-400'>
     <div className='relative top-50'>
         <h1 className='text-center font-bold text-4xl md:text-5xl  text-(--blue1)' >Our Featured Course <br /> at Smart Academy</h1>
-<div className='p-4'>
+<div className=''>
         <div className='mt-30 flex justify-around'>
           <CourseCard image={chemImg} description={"Kids Science Course"}/>
           <CourseCard image={cookImg} description={"Kids Chef Course"}/>
