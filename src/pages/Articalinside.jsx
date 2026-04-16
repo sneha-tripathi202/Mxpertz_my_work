@@ -6,8 +6,8 @@ import astroImg from '../images/astro.jpg'
 
 const Articalinside = () => {
   return (
-    <div className='bg-gray-100 w-screen lg:h-180 xl:h-220 h-220'>
-       <h1 className='text-center font-bold text-4xl md:text-5xl  text-(--blue1)' >Articale and Insigth</h1>
+    <div className='bg-gray-100 w-screen lg:h-180 xl:h-220 h-220 sm:h-180'>
+       <h1 className='text-center font-bold text-4xl md:text-4xl  text-(--blue1) ' >Articale and Insigth</h1>
       <div className='flex justify-around'>
         <ArticalCard image={techImg} des={"The Benifits of Enrolling Kids In Online Courses"}/>
        <ArticalCard image={playImg} des={"Unlock Your Child's Potential with Online Courses for Kids"}/>
