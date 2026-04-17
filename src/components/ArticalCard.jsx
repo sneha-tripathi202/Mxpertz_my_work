@@ -3,7 +3,7 @@ import React from 'react'
 const ArticalCard = ({image,des}) => {
   return (
     <div>
-       <div className='bg-white  mt-20  xl:w-99 lg:w-75 lg:h-110 xl:h-135 md:w-60 md:h-100 rounded-3xl text-center '>
+       <div className='bg-white mousedown mt-20  xl:w-99 lg:w-75 lg:h-110 xl:h-135 md:w-60 md:h-100 rounded-3xl text-center '>
                         <div className='xl:w-99 xl:h-50 md:w-60 md:h-45  lg:w-75 lg:h-40 rounded-2xl   
                           'style={{backgroundImage:`url(${image})`,
                               backgroundPosition:'center',
