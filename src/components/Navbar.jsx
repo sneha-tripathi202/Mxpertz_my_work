@@ -1,25 +1,67 @@
-import React, { useState } from 'react'
+import React, { use, useRef, useState } from 'react'
 import { FiAlignJustify } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
+  import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
 const Navbar = () => {
   const [menu, setmenu] = useState(false)
   const [navbar, setnavbar] = useState(true)
+   const logo = useRef(null)
+   const menu1 = useRef(null)
+   const menu2 = useRef(null)
+   const menu3 = useRef(null)
+   const button = useRef(null)
 
 
+   const tl=gsap.timeline()
+  useGSAP(()=>{
+    tl.from(menu1.current,{
+    y:-70,
+    opacity:0,
+    duration:1,
+     delay:0.1
+   }),
+    tl.from(menu2.current,{
+    y:-70,
+    opacity:0,
+    duration:1,
+     delay:0.1
+   }),
+    tl.from(menu3.current,{
+    y:-70,
+    opacity:0,
+    duration:1,
+     delay:0.1
+   }),
+   tl.from(logo.current,{
+    y:-30,
+    opacity:0,
+    duration:1,
+     delay:0.1
+   }),tl.from(button.current,{
+    
+    opacity:0,
+    duration:1,
+     delay:0.1
+   })
+    
+  })
+ 
   return (
    <div> 
    {navbar&& <div  className=' text-(--white) flex justify-between items-center w-screen pt-10'>
-    <div className='text-[24px] md:hidden  lg:block font-medium w-95.25 flex justify-between gap-4 pl-20 '>
-  <a className='mr-12 mousedown' href="">Home</a>  
-  <a className='mr-12 mousedown' href="">About</a>  
-  <a className=' mousedown' href="">Course</a>  
+    <div className='text-[24px] md:hidden hidden lg:block font-medium w-95.25 flex justify-between gap-4 pl-20 '>
+  <a className='mr-12 mousedown 'ref={menu1} href="">Home</a>  
+  <a className='mr-12 mousedown menu2'ref={menu2} href="">About</a>  
+  <a className=' mousedown menu3'ref={menu3} href="">Course</a>  
        </div>
        <div onClick={()=>{setmenu(true);setnavbar(false)}} className='relative mousedown lg:hidden bottom-1 pl-18'><FiAlignJustify size={40} /></div>
        <div>
-         <h1 className='font-bold lg:mr-20 text-[28px] '>Smart Academy</h1> 
+         <h1 className='font-bold lg:mr-20 text-[28px] ' ref={logo}>Smart Academy</h1> 
        </div>
        <div>
-          <button className='bg-(--pink) md:p-2 mr-10 lg:w-50 w-40 lg:text-[20px] text-[18px] font-medium h-14 mousedown rounded-full'>Explore Course</button>
+          <button ref={button} className='bg-(--pink) md:p-2 mr-10 lg:w-50 w-40 lg:text-[20px] text-[18px] font-medium h-14 mousedown rounded-full'>Explore Course</button>
        </div>
        
     </div>}

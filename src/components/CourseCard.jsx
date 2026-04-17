@@ -9,7 +9,7 @@ const CourseCard = ({image,description}) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         }} 
-         className='rounded-4xl lg:w-50 md:w-40 md:h-40 lg:h-50 xl:w-74 xl:h-70'
+         className='rounded-4xl lg:w-50 md:w-40 md:h-35 sm:w-35 sm:h-35 w-35 h-35 overflow-x-auto lg:h-50 xl:w-74 xl:h-70'
     ></div>
     <h1 className='text-(--blue2)  xl:text-2xl font-medium m-4 text-center'>{description}</h1>
 
