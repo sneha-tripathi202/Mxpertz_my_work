@@ -56,12 +56,12 @@ const Navbar = () => {
   <a className='mr-12 mousedown menu2'ref={menu2} href="">About</a>  
   <a className=' mousedown menu3'ref={menu3} href="">Course</a>  
        </div>
-       <div onClick={()=>{setmenu(true);setnavbar(false)}} className='relative mousedown lg:hidden bottom-1 pl-18'><FiAlignJustify size={40} /></div>
+       <div onClick={()=>{setmenu(true);setnavbar(false)}} className='relative mousedown lg:hidden bottom-1  pl-10 sm:pl-18'><FiAlignJustify size={40} /></div>
        <div>
-         <h1 className='font-bold lg:mr-20 text-[28px] ' ref={logo}>Smart Academy</h1> 
+         <h1 className='font-bold lg:mr-20 mx-4  text-2xl sm:text-[28px] ' ref={logo}>Smart Academy</h1> 
        </div>
        <div>
-          <button ref={button} className='bg-(--pink) md:p-2 mr-10 lg:w-50 w-40 lg:text-[20px] text-[18px] font-medium h-14 mousedown rounded-full'>Explore Course</button>
+          <button ref={button} className='bg-(--pink) md:p-2 mr-2 sm:mr-10 lg:w-50 w-36 sm:w-40 lg:text-[20px]  text-base sm:text-[18px] font-medium h-12 sm:h-14 mousedown rounded-full'>Explore Course</button>
        </div>
        
     </div>}

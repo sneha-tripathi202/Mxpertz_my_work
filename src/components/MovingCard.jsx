@@ -3,8 +3,8 @@ import React from 'react'
 const MovingCard = ({image,name}) => {
   return (
     <div>
-      <div> <div className='bg-(--white)    mt-10 md:w-100 md:h-55 flex items-center justify-center gap-10  rounded-3xl  '>
-                        <div className=' mt-4  w-15 h-15 lg:h-20 lg:w-20 rounded-full  relative right-3 '
+      <div> <div className='bg-(--white)    mt-10 md:w-100 w-60 sm:w-80 sm:h-35 md:h-55 flex items-center justify-center gap-10  rounded-3xl  '>
+                        <div className=' sm:mt-4 mt-2  sm:w-20 sm:h-20 h-15 w-15 lg:h-20 lg:w-20 rounded-full  relative sm:right-3  '
                         style={{backgroundImage:`url(${image})`,
                               backgroundPosition:'center',
                               backgroundSize:"cover"
