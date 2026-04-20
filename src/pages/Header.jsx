@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import Navbar from '../components/Navbar'
  import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Header = () => {
   const logo = useRef(null)
@@ -10,14 +11,20 @@ const Header = () => {
      const heading3 = useRef(null)
      const para= useRef(null)
 
-
+gsap.registerPlugin(ScrollTrigger);
      const tl=gsap.timeline()
   useGSAP(()=>{
     tl.from(heading1.current,{
     y:-70,
     opacity:0,
     duration:1,
-     delay:0.1
+     delay:0.1,
+      scrollTrigger: {
+        trigger: heading.current,   
+        start: "top 80%",          
+        toggleActions: "play none none reverse", 
+        markers: true,              
+      }
    }),
     tl.from(heading2.current,{
     y:-70,
