@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
   const logo = useRef(null)
      const heading1 = useRef(null)
@@ -11,7 +13,6 @@ const Header = () => {
      const heading3 = useRef(null)
      const para= useRef(null)
 
-gsap.registerPlugin(ScrollTrigger);
      const tl=gsap.timeline()
   useGSAP(()=>{
     tl.from(heading1.current,{
@@ -19,12 +20,11 @@ gsap.registerPlugin(ScrollTrigger);
     opacity:0,
     duration:1,
      delay:0.1,
-      scrollTrigger: {
-        trigger: heading.current,   
-        start: "top 80%",          
-        toggleActions: "play none none reverse", 
-        markers: true,              
-      }
+     scrollTrigger:{
+      trigger:".header"
+      
+    }
+     
    }),
     tl.from(heading2.current,{
     y:-70,
@@ -47,7 +47,7 @@ gsap.registerPlugin(ScrollTrigger);
   })
  
   return (
-    <div className=' w-full header h-250 '>
+    <div className=' w-full header h-250 sticky '>
       <Navbar/>
       <div className='text-(--white) my-50 lg:ml-18 ml-10 '><h1 className=' lg:text-[90px] text-[70px]  leading-18 font-bold   ' ref={heading1}>Achieve your future</h1> 
       <h1 className='text-[70px] lg:text-[90px]  font-bold ' ref={heading2}>With Smart </h1> <h1 ref={heading3} className='lg:text-[90px] text-[70px] font-bold  relative bottom-6'>Academy</h1>
