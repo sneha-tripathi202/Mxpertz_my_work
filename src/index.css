@@ -19,11 +19,13 @@ body,html{
   --blue2:#008BD8;
 }
 .header {
+  background-attachment: fixed;
   background: 
     linear-gradient(to right , rgba(0,0,0,1), rgba(255,255,255,0)), 
     url('./images/bgwork.webp');
   background-size: cover;
   background-position:top;
+  
 }
 .image
 {

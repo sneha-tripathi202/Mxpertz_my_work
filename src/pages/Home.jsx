@@ -1,9 +1,11 @@
 import React from 'react'
 import ServiceCard from '../components/ServiceCard'
+import { useGSAP } from '@gsap/react'
+
 
 const Home = () => {
   return (
-    <div className='bg-gray-100 w-full lg:h-190 md:360 h-360   '>
+    <div className='bg-gray-100 w-full lg:h-190 md:360 h-360  home '>
      <div className='w-screen lg:h-190 md:300 h-330 grid lg:grid-flow-col lg:grid-cols-[1fr_400px_1fr]  lg:auto-cols-max  lg:gap-4 '>
      <div className=''>
       <div className='flex  lg:justify-end lg:items-end justify-center  h-120 '>
