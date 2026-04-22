@@ -27,9 +27,11 @@ const Header = () => {
       {
       scale:0,
       ease:"none",
+      duration:1,
+      delay:0.4,
       scrollTrigger:{
         trigger:".header",
-        start:"top",
+        start:"bottom 40% ",
         end:"bottom top",
         scrub:true,
 
@@ -98,7 +100,8 @@ const Header = () => {
   })
  
   return (
-    <div className='bg-fixed w-full header  h-250 sticky ' >
+    <div>
+      <div className='bg-fixed w-full header  h-250 sticky ' >
       <Navbar/>
       <div className='bg-(--white) w-5 h-5 ml-20 rounded-full' ref={ball}></div>
       <div className="flex space-x-4">
@@ -110,8 +113,10 @@ const Header = () => {
       <h1 className='text-[70px] lg:text-[90px]  font-bold ' ref={heading2}>With Smart </h1> <h1 ref={heading3} className='lg:text-[90px] text-[70px] font-bold  relative bottom-6'>Academy</h1>
       <p ref={para} className='lg:text-[20px] md:text-[16px] lg:w-200 w-40vw  text-(--white)  font-normal' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minus illo ab odio non! Iusto voluptas suscipit ipsa esse labore voluptatum eveniet dolores consequuntur nihil?</p>
        <div>
-          <button className='bg-(--pink) p-2  lg:w-50 w-40  lg:text-[20px] text-[18px] font-medium h-14 mt-12 rounded-full mousedown'>Explore Course</button>
+          <button className='bg-(--pink) p-2  lg:w-50 w-40  lg:text-[20px] text-[18px] font-medium h-14 mt-12 rounded-full button'>Explore Course</button>
        </div></div>
+    </div>
+    
     </div>
   )
 }

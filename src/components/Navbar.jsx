@@ -20,7 +20,7 @@ const Navbar = () => {
     y:-70,
     opacity:0,
     duration:1,
-     delay:0.1
+     delay:0.2
    }),
     tl.from(menu2.current,{
     y:-70,
@@ -49,19 +49,19 @@ const Navbar = () => {
   })
  
   return (
-   <div> 
-   {navbar&& <div  className=' text-(--white) flex justify-between items-center w-screen pt-10'>
-    <div className='text-[24px] md:hidden hidden lg:block font-medium w-95.25 flex justify-between gap-4 pl-20 '>
-  <a className='mr-12 mousedown 'ref={menu1} href="">Home</a>  
-  <a className='mr-12 mousedown menu2'ref={menu2} href="">About</a>  
+   <div className='w-100vw'> 
+   {navbar&& <div  className=' text-(--white) grid grid-cols-[1fr_1fr_300px] auto-cols-max items-center  justify-around pt-10'>
+    <div className='text-[24px]  border hidden  lg:block font-medium w-95.25   '>
+  <a className=' mousedown 'ref={menu1} href="#about">Home</a>  
+  <a className=' mousedown menu2'ref={menu2} href="">About</a>  
   <a className=' mousedown menu3'ref={menu3} href="">Course</a>  
        </div>
        <div onClick={()=>{setmenu(true);setnavbar(false)}} className='relative mousedown lg:hidden bottom-1  pl-10 sm:pl-18'><FiAlignJustify size={40} /></div>
        <div>
-         <h1 className='font-bold lg:mr-20 mx-4  text-2xl sm:text-[28px] ' ref={logo}>Smart Academy</h1> 
+         <h1 className='font-bold text-center border lg:mr-20 mx-4  text-2xl sm:text-[28px] ' ref={logo}>Smart Academy</h1> 
        </div>
-       <div>
-          <button ref={button} className='bg-(--pink) md:p-2 mr-2 sm:mr-10 lg:w-50 w-36 sm:w-40 lg:text-[20px]  text-base sm:text-[18px] font-medium h-12 sm:h-14 mousedown rounded-full'>Explore Course</button>
+       <div className='flex border justify-center '>
+          <button ref={button} className='bg-(--pink) md:p-2  border  lg:w-50 w-36 sm:w-40 lg:text-[20px]  text-base sm:text-[18px] font-medium h-12 sm:h-14 button rounded-full'>Explore Course</button>
        </div>
        
     </div>}

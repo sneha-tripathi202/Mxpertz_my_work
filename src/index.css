@@ -1,12 +1,13 @@
 @import "tailwindcss";
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 body,html{
     margin: 0;
     padding: 0;
     width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden;
     min-width:450px;
+    overflow-x: clip;
     font-family:  "Inter", sans-serif;
 }
 
@@ -48,4 +49,12 @@ body,html{
 }
 .shadow{
   box-shadow: 2px 3px 5px 4px #807878 ;
+}
+.button{
+  transition: transform 0.2s ease;
+
+}
+button:hover{
+  transform: scale(1.1);
+  background-color:var(--blue2) ;
 }

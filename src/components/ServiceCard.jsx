@@ -8,7 +8,7 @@ const ServiceCard = () => {
     return (
         <div className='bg-[#F5F5F5] h-130 w-full md:h-170 sm:h-150 lg:h-211   '>
             <h1 className='text-center relative top-34 font-bold text-3xl sm:text-4xl  lg:text-5xl text-(--blue1)' >Smart Academy offers <br /> services like</h1>
-            <div className='flex  w-full relative top-34 justify-around overflow-x-auto scroll  p-2'>
+            <div className='flex  w-full relative top-34 justify-around md:overflow-visible overflow-x-auto scroll  p-2'>
                 <div className='bg-(--white)  shadow mousedown mt-15 md:w-70 md:h-84 lg:h-98 flex flex-col ml-1 items-center justify-center rounded-xl text-center '>
                   <div className='lg:w-15 mt-6  md:w-12 h-12 lg:h-15 rounded-2xl bg-(--blue2) flex justify-center items-center'><GiTeacher size={28} color='white'/></div>
                    <h1 className='font-bold text-(--black)  text-[20px] mb-4 px-6 pt-10 w-45 text-center '>Teachers Prefesional</h1>

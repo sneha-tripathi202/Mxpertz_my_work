@@ -12,21 +12,30 @@ import SmartAca from './pages/SmartAca'
 import Articalinside from './pages/Articalinside'
 import About from './pages/About'
 import Footer from './pages/Footer'
-import Lenis from "lenis"
+import Lenis from "@studio-freight/lenis";
+
+
+
 
 function App() {
   const [count, setCount] = useState(0)
- useEffect(()=>{
-  // Initialize Lenis
-const lenis = new Lenis({
-  autoRaf: true,
-});
+ useEffect(() => {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
 
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
- })
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+  return () => {
+    lenis.destroy(); // cleanup
+  };
+}, []);
+
   return (
     <>
       <Header/>
