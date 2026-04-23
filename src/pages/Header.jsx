@@ -5,6 +5,13 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/all";
 import { FiRotateCcw } from 'react-icons/fi';
 import Lenis from "lenis"
+import Home from './Home';
+import ServiceCard from '../components/ServiceCard';
+import Course from './Course';
+import SmartAca from './SmartAca';
+import Articalinside from './Articalinside';
+import About from './About';
+import Footer from './Footer';
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -115,8 +122,30 @@ const Header = () => {
        <div>
           <button className='bg-(--pink) p-2  lg:w-50 w-40  lg:text-[20px] text-[18px] font-medium h-14 mt-12 rounded-full button'>Explore Course</button>
        </div></div>
-    </div>
+       </div>
     
+    <section id='home'>
+        <Home/>
+    </section>
+    
+    <section id='home'>
+    </section>
+     <ServiceCard/>
+    <section id='home'>
+      <Course/>
+    </section>
+    <section id='home'>
+      <SmartAca/>
+    </section>
+    <section id='home'>
+      <Articalinside/>
+    </section>
+      <section id='home'>
+      <About/>
+    </section>
+     <section id='home'>
+      <Footer/>
+      </section>
     </div>
   )
 }
