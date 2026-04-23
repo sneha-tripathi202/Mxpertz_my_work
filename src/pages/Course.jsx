@@ -11,7 +11,7 @@ import CourseCard from '../components/CourseCard'
 
 const Course = () => {
   return (
-    <div className='bg-gray-100 lg:h-300 md:h-250 xl:h-350 sm:h-260 h-250'>
+    <div id='course' className='bg-gray-100 lg:h-300 md:h-250 xl:h-350 sm:h-260 h-250'>
     <div className='relative top-50'>
         <h1 className='text-center font-bold text-3xl md:text-4xl lg:text-5xl text-(--blue1)' >Our Featured Course <br /> at Smart Academy</h1>
 <div className=''>

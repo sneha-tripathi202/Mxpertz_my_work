@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/all";
 import { FiRotateCcw } from 'react-icons/fi';
-import Lenis from "lenis"
 import Home from './Home';
 import ServiceCard from '../components/ServiceCard';
 import Course from './Course';
@@ -105,11 +104,13 @@ const Header = () => {
     );
    
   })
- 
+  const id1="home"
+  const id2="course"
+  const id3="about"
   return (
     <div>
       <div className='bg-fixed w-full header  h-250 sticky ' >
-      <Navbar/>
+      <Navbar id1={id1} id2={id2} id3={id3}/>
       <div className='bg-(--white) w-5 h-5 ml-20 rounded-full' ref={ball}></div>
       <div className="flex space-x-4">
         <div className="mini-ball w-8 h-8 bg-green-500 rounded-full"></div>
@@ -124,28 +125,14 @@ const Header = () => {
        </div></div>
        </div>
     
-    <section id='home'>
-        <Home/>
-    </section>
-    
-    <section id='home'>
-    </section>
+        
+      <Home id={Home}/>
      <ServiceCard/>
-    <section id='home'>
-      <Course/>
-    </section>
-    <section id='home'>
+      <Course id={Course}/>
       <SmartAca/>
-    </section>
-    <section id='home'>
       <Articalinside/>
-    </section>
-      <section id='home'>
-      <About/>
-    </section>
-     <section id='home'>
+      <About id={About}/>
       <Footer/>
-      </section>
     </div>
   )
 }

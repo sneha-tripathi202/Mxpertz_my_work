@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
   import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Link } from "react-router-dom";
-const Navbar = () => {
+const Navbar = ({id1,id2,id3}) => {
   const [menu, setmenu] = useState(false)
   const [navbar, setnavbar] = useState(true)
    const logo = useRef(null)
@@ -17,7 +17,7 @@ const Navbar = () => {
    const tl=gsap.timeline()
   useGSAP(()=>{
     tl.from(menu1.current,{
-    y:4,
+    y:0,
     opacity:0,
     duration:1,
      delay:0.2
@@ -54,9 +54,9 @@ const Navbar = () => {
    <div  className=' text-(--white) pt-10 flex justify-around'>
     <div className=' hidden lg:block'>
       <div className='text-[24px]   flex gap-6 xl:gap-10 justify-around  font-medium    '>
- <a className=' mousedown  menu1'ref={menu1} href="">Home</a>
- <a className=' mousedown menu2'ref={menu2} href="">About</a>
- <a className=' mousedown menu3'ref={menu3} href="">Course</a>
+ <a className=' mousedown mb-2 menu1'ref={menu1} href="#home">Home</a>
+ <a className=' mousedown menu2'ref={menu2} href="#about">About</a>
+ <a className=' mousedown menu3'ref={menu3} href="#course">Course</a>
        </div>
     </div>
        <div onClick={()=>{setmenu(true);setnavbar(false)}} className='relative mousedown lg:hidden'><FiAlignJustify size={40} /></div>
@@ -70,12 +70,12 @@ const Navbar = () => {
     </div>}
     
     <div >
-        {menu&& <div className='w-screen min-h-screen bg-gray-100'>
+        {menu&& <div className='w-full min-h-full bg-gray-100'>
            <div onClick={()=>{setmenu(false);setnavbar(true)}} className='pt-8 w-20  mousedown text-start'><RxCross1 size={50} /></div>
           <div className=' text-(--black) w-full h-screen flex flex-col justify-center items-center  '>
-           <a className='text-6xl border-b-2 border-t-2 border-(--black) min-w-screen text-center p-2 mousedown m-2 font-semibold text-(--pink)' href="">Home</a>  
-           <a className='text-6xl border-b-2 border-(--black) min-w-screen text-center p-2 m-2 mousedown font-semibold text-(--pink)' href="">About</a>  
-           <a className='text-6xl border-b-2 border-(--black) min-w-screen text-center p-2 m-2 mousedown font-semibold text-(--pink)' href="">Course</a> </div></div>}</div>
+           <a onClick={()=>{setmenu(false);setnavbar(true)}} className='text-6xl border-b-2 border-t-2 border-(--black) min-w-screen text-center p-2 mousedown m-2 font-semibold text-(--pink)' href="#home">Home</a>  
+           <a onClick={()=>{setmenu(false);setnavbar(true)}} className='text-6xl border-b-2 border-(--black) min-w-screen text-center p-2 m-2 mousedown font-semibold text-(--pink)' href="#about">About</a>  
+           <a onClick={()=>{setmenu(false);setnavbar(true)}} className='text-6xl border-b-2 border-(--black) min-w-screen text-center p-2 m-2 mousedown font-semibold text-(--pink)' href="#course">Course</a> </div></div>}</div>
     
     </div>
   )
