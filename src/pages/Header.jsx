@@ -109,7 +109,7 @@ const Header = () => {
   const id3="about"
   return (
     <div>
-      <div className='bg-fixed w-full header  h-250 sticky ' >
+      <div className='header bg-fixed w-full overflow-x-cl  h-250 sticky ' >
       <Navbar id1={id1} id2={id2} id3={id3}/>
       <div className='bg-(--white) w-5 h-5 ml-20 rounded-full' ref={ball}></div>
       <div className="flex space-x-4">
@@ -117,8 +117,8 @@ const Header = () => {
         <div className="mini-ball w-8 h-8 bg-yellow-500 rounded-full"></div>
         <div className="mini-ball w-8 h-8 bg-purple-500 rounded-full"></div>
       </div>
-      <div className='text-(--white) my-50 lg:ml-18 ml-10 heading1 '><h1 className=' lg:text-[90px] text-[70px]  leading-18 font-bold   ' ref={heading1}>Achieve your future</h1> 
-      <h1 className='text-[70px] lg:text-[90px]  font-bold ' ref={heading2}>With Smart </h1> <h1 ref={heading3} className='lg:text-[90px] text-[70px] font-bold  relative bottom-6'>Academy</h1>
+      <div className='text-(--white) my-50 lg:ml-18 ml-10 heading1 '><h1 className=' lg:text-[90px] text-[60px]  leading-18 font-bold   ' ref={heading1}>Achieve your future</h1> 
+      <h1 className='text-[60px] lg:text-[90px]  font-bold ' ref={heading2}>With Smart </h1> <h1 ref={heading3} className='lg:text-[90px] text-[60px] font-bold  relative bottom-6'>Academy</h1>
       <p ref={para} className='lg:text-[20px] md:text-[16px] lg:w-200 w-40vw  text-(--white)  font-normal' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minus illo ab odio non! Iusto voluptas suscipit ipsa esse labore voluptatum eveniet dolores consequuntur nihil?</p>
        <div>
           <button className='bg-(--pink) p-2  lg:w-50 w-40  lg:text-[20px] text-[18px] font-medium h-14 mt-12 rounded-full button'>Explore Course</button>

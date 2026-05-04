@@ -49,7 +49,7 @@ const Navbar = ({id1,id2,id3}) => {
   })
  
   return (
-   <div className='w-100vw'> 
+   <div className='w-full'> 
    {navbar&& 
    <div  className=' text-(--white) pt-10 flex justify-around'>
     <div className=' hidden lg:block'>

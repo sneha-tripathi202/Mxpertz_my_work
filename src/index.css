@@ -4,10 +4,11 @@
 body,html{
     margin: 0;
     padding: 0;
-    width: 100vw;
-    min-height: 100vh;
-    min-width:450px;
-    overflow-x: clip;
+    width: 100%;
+    /* min-height: 100%;
+    min-width:450px; */
+    height: 100dvh;
+    overflow-x:hidden;
     font-family:  "Inter", sans-serif;
 }
 
@@ -48,13 +49,17 @@ body,html{
   transform: scale(1.1); /* shrink when mouse down */
 }
 .shadow{
-  box-shadow: 2px 3px 5px 4px #807878 ;
+  box-shadow: 2px  ;
 }
 .button{
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease,background-color 0.2s ease;
 
 }
-button:hover{
+.button:hover{
   transform: scale(1.1);
   background-color:var(--blue2) ;
+}
+.button:active,
+.button:focus{
+  transform:scale(1) ;
 }

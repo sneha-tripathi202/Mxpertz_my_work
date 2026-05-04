@@ -23,21 +23,7 @@ function App() {
   return (
     <>
 
-<ReactLenis
- root 
- options={{
-  lerp:0.1,
-  duration:1.2,
-  orientation:"vertical",
-  gestureOrientation:'vertical',
-  smoothWheel:true,
-  wheelMultiplier:1,
-  smoothTouch:false,
-  touchMultiplier:2,
- }}
-
->
-  <Header/></ReactLenis>      
+<Header/>   
     </>
   )
 }
